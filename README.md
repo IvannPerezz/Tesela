@@ -126,8 +126,3 @@ details.
 
 Data: weather by [Open‑Meteo](https://open-meteo.com) (CC BY 4.0) and
 [AEMET](https://www.aemet.es) (© AEMET); artwork lookup through the iTunes Search API.
-
-SF Pro and Apple's icons are **not** included: Tesela only uses SF Pro if you've installed it yourself.
-
-The design of the settings window is inspired by
-[TranslucentTB Revamped](https://github.com/IvannPerezz/TranslucentTB-Revamped).
