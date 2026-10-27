@@ -5,7 +5,7 @@
 <h1 align="center">Tesela</h1>
 
 <p align="center">
-  iOS‑ and macOS‑style desktop widgets for Windows 10 and 11.<br>
+  iOS/macOS‑style desktop widgets for Windows 10 and 11.<br>
   <b>English</b> · <a href="README.es.md">Español</a>
 </p>
 
