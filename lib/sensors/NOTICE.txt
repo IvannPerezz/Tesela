@@ -1,0 +1,14 @@
+Sensores integrados de Tesela
+=============================
+
+Estas librerías se distribuyen sin modificar, tal como vienen en LibreHardwareMonitor 0.9.6
+(https://github.com/LibreHardwareMonitor/LibreHardwareMonitor/releases):
+
+- LibreHardwareMonitorLib.dll  · Mozilla Public License 2.0 · https://mozilla.org/MPL/2.0/
+  Código fuente: https://github.com/LibreHardwareMonitor/LibreHardwareMonitor
+- HidSharp.dll                 · Apache License 2.0
+- DiskInfoToolkit.dll, RAMSPDToolkit-NDD.dll, BlackSharp.Core.dll · de los autores de LibreHardwareMonitor
+- System.Memory.dll, System.Buffers.dll, System.Numerics.Vectors.dll,
+  System.Runtime.CompilerServices.Unsafe.dll · MIT (Microsoft / .NET Foundation)
+
+El controlador de bajo nivel (PawnIO) no se incluye: lo instala LibreHardwareMonitor.

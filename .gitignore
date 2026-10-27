@@ -1,0 +1,15 @@
+# Compilación
+bin/
+obj/
+settings/bin/
+settings/obj/
+installer/staging/
+installer/Output/
+
+# No redistribuibles: SF Pro e iconos de Apple (solo para uso local)
+fonts/SF-*
+icons/*
+!icons/tesela-tray.ico
+
+.vs/
+*.user

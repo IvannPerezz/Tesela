@@ -1,0 +1,69 @@
+{
+ "AccentInWidgets": true,
+ "Font": "sf",
+ "GlassIntensity": 0.5,
+ "Initialized": true,
+ "Locked": true,
+ "Material": "glass",
+ "Opacity": 1,
+ "Radius": 30,
+ "Scale": 0.95,
+ "Shadow": true,
+ "Theme": "dark",
+ "Widgets": [
+  {
+   "Data": {
+    "units": "c",
+    "bg": "#46000F",
+    "bgStyle": "solid",
+    "material": "glass"
+   },
+   "Id": "48e4c0e2eceb4b10a3bf412ed3a6904b",
+   "Kind": "weather",
+   "Size": 2,
+   "X": 1697,
+   "Y": 370
+  },
+  {
+   "Data": {
+    "bg": "#46000F",
+    "accent": "auto",
+    "metric": "cpu.cores",
+    "bg2": "#0A0A0A",
+    "showGpu": "1",
+    "thickness": "5",
+    "chart": "1",
+    "uptime": "1",
+    "interval": "1",
+    "style": "numbers",
+    "order": "cpu,cpu.cores,cpu.temp,cpu.freq,cpu.power,gpu.temp,gpu,gpu.hotspot,gpu.vramtemp,gpu.clock,gpu.power,gpu.fan,vram,ram,disk,disk.io,net,net.session,battery,board,fans,volts",
+    "on": "cpu.cores,cpu.temp,gpu.temp,ram,volts",
+    "netIp": "0",
+    "color.cpu": "#FFBB6E",
+    "color.gpu": "#CB86C2",
+    "color.ram": "#1ABC72",
+    "color.sensors": "#40A7E0",
+    "chartMetric": "gpu",
+    "freqUnit": "ghz"
+   },
+   "Id": "c7712461930140b39c5e253dd8b13392",
+   "Kind": "system",
+   "Size": 2,
+   "X": 1697,
+   "Y": 712
+  },
+  {
+   "Data": {
+    "bg": "#46000F",
+    "artColor": "1",
+    "progress": "1"
+   },
+   "Id": "2ef4b0161b174e36ac16d3ebe1477e40",
+   "Kind": "media",
+   "Size": 2,
+   "X": 1697,
+   "Y": 28
+  }
+ ],
+ "Language": "auto"
+}

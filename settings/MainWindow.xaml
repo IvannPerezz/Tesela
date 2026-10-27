@@ -1,0 +1,80 @@
+﻿<Window
+    x:Class="TeselaSettings.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Todo dentro de un UserControl para que el VisualStateManager y la tipografía se apliquen bien -->
+    <UserControl x:Name="Root">
+        <!-- Filo fino sobre el borde de la ventana (recortada a 26 px), que suaviza las esquinas como en macOS -->
+        <Grid x:Name="WindowCard" CornerRadius="26" BorderBrush="{ThemeResource SettingsWindowStroke}" BorderThickness="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="248" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Barra lateral: una capa más densa que el contenido, para que se lea como estructura -->
+            <Grid x:Name="Sidebar" Background="{ThemeResource SettingsSidebarBackground}" CornerRadius="25,0,0,25" Padding="10,0,10,12">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <!-- Marca -->
+                <!-- Marca, como en la ventana anterior de Tesela -->
+                <StackPanel x:Name="Brand" Orientation="Horizontal" Margin="12,22,12,16">
+                    <!-- Los azulejos del icono de Tesela -->
+                    <Image Width="38" Height="38" Margin="0,0,12,0">
+                        <Image.Source>
+                            <BitmapImage UriSource="ms-appx:///Assets/TeselaTiles.png" DecodePixelWidth="96" DecodePixelHeight="96" />
+                        </Image.Source>
+                    </Image>
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="Tesela" FontSize="21" FontWeight="Bold" />
+                        <TextBlock x:Name="BrandSubtitle" Text="Widgets para tu escritorio" FontSize="12" Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+                </StackPanel>
+
+                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollMode="Disabled">
+                    <Grid x:Name="NavHost">
+                        <Border x:Name="SelectionPill" VerticalAlignment="Top" CornerRadius="10" Opacity="0"
+                                Background="{ThemeResource SettingsSelectionBackground}" BorderBrush="{ThemeResource SettingsSelectionStroke}" BorderThickness="1" />
+                        <StackPanel x:Name="NavList" Spacing="2" />
+                    </Grid>
+                </ScrollViewer>
+            </Grid>
+
+            <!-- Detalle -->
+            <ScrollViewer x:Name="DetailScroller" Grid.Column="1" Margin="0,40,0,0" VerticalScrollBarVisibility="Auto" HorizontalScrollMode="Disabled">
+                <Grid x:Name="DetailHost" Padding="34,0,34,34" MaxWidth="900" />
+            </ScrollViewer>
+
+            <!-- Botones de la ventana, arriba a la derecha y en este orden: minimizar, maximizar, cerrar -->
+            <StackPanel x:Name="TrafficLights" Grid.Column="1" Orientation="Horizontal" Spacing="8.6" Padding="6" Margin="0,10.5,11.5,0"
+                        HorizontalAlignment="Right" VerticalAlignment="Top" Background="Transparent"
+                        PointerEntered="LightsEntered" PointerExited="LightsExited">
+                <Button x:Name="MinButton" Style="{StaticResource TrafficLightStyle}" Background="#FEBC2E" Click="MinimizeClicked" ToolTipService.ToolTip="Minimizar">
+                    <Path x:Name="MinGlyph" Style="{StaticResource TrafficLightGlyphStyle}" Stroke="#B0584110" Fill="#B0584110" Data="M 3.5,6.5 L 9.5,6.5">
+                        <Path.OpacityTransition>
+                            <ScalarTransition Duration="0:0:0.12" />
+                        </Path.OpacityTransition>
+                    </Path>
+                </Button>
+                <Button x:Name="MaxButton" Style="{StaticResource TrafficLightStyle}" Background="#28C840" Click="MaximizeClicked" ToolTipService.ToolTip="Maximizar">
+                    <!-- dos puntas en las esquinas: hacia fuera para maximizar y hacia dentro para restaurar -->
+                    <Path x:Name="MaxGlyph" Style="{StaticResource TrafficLightGlyphStyle}" StrokeThickness="0" Stroke="#B00E4616" Fill="#B00E4616" Data="M 3.6,8.2 L 3.6,3.6 L 8.2,3.6 Z M 9.4,4.8 L 9.4,9.4 L 4.8,9.4 Z">
+                        <Path.OpacityTransition>
+                            <ScalarTransition Duration="0:0:0.12" />
+                        </Path.OpacityTransition>
+                    </Path>
+                </Button>
+                <Button x:Name="CloseButton" Style="{StaticResource TrafficLightStyle}" Background="#FF5F57" Click="CloseClicked" ToolTipService.ToolTip="Cerrar">
+                    <Path x:Name="CloseGlyph" Style="{StaticResource TrafficLightGlyphStyle}" Stroke="#B059211E" Fill="#B059211E" Data="M 4.4,4.4 L 8.6,8.6 M 8.6,4.4 L 4.4,8.6">
+                        <Path.OpacityTransition>
+                            <ScalarTransition Duration="0:0:0.12" />
+                        </Path.OpacityTransition>
+                    </Path>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </UserControl>
+</Window>
