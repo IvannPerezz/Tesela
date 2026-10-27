@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/33995580/README.md)
 <p align="center">
   <img src="design/tesela-icon.png" width="128" alt="Tesela icon">
 </p>
