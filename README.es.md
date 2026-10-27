@@ -127,8 +127,3 @@ Tesela usa estos componentes de terceros. Los detalles están en
 
 Datos: tiempo de [Open‑Meteo](https://open-meteo.com) (CC BY 4.0) y [AEMET](https://www.aemet.es) (© AEMET);
 búsqueda de carátulas con la iTunes Search API.
-
-SF Pro y los iconos de Apple **no** se incluyen: Tesela solo usa SF Pro si la has instalado tú.
-
-El diseño de la ventana de ajustes está inspirado en
-[TranslucentTB Revamped](https://github.com/IvannPerezz/TranslucentTB-Revamped).
