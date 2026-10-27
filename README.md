@@ -15,8 +15,7 @@
 
 Tesela puts small, medium and large widgets on your desktop that snap to a grid like the tiles of a
 mosaic (that's what *tesela* means in Spanish). They sit on the wallpaper, below your windows, and can be
-solid or **Liquid Glass**: a glass material that blurs the wallpaper behind each widget and follows it in
-real time.
+solid or **Liquid Glass**.
 
 ## Widgets
 
