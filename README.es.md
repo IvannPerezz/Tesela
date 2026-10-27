@@ -15,8 +15,7 @@
 
 Tesela pone en tu escritorio widgets pequeños, medianos y grandes que encajan en una cuadrícula, como las
 teselas de un mosaico. Viven sobre el fondo de pantalla, por debajo de tus ventanas, y pueden ser sólidos o
-de **Liquid Glass**: un cristal que desenfoca el fondo que hay detrás de cada widget y lo sigue en tiempo
-real.
+con efecto **Liquid Glass**.
 
 ## Widgets
 
